@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import <JSPatch/JSPatch.h>
 
 @interface AppDelegate ()
 
@@ -16,7 +17,10 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    
+    [JSPatch startWithAppKey:@"9a734602c8a3ead1"];
+    [JSPatch sync];
+    
     return YES;
 }
 
